@@ -19,7 +19,8 @@ Response:
   "meta": {
     "request_id": "req_abc123",
     "processing_ms": 450,
-    "cost_units": 1
+    "cost_units": 1,
+    "edge": "eu-1"
   }
 }
 ```
@@ -96,15 +97,17 @@ curl https://api.iney.io/v1/anonymous/usage
 
 ```json
 {
+  "session_id": "anon_abc123",
   "tier": "anonymous",
   "used": 11,
   "quota": 50,
   "remaining": 39,
   "period": "daily",
-  "reset_at": "2026-02-02T00:00:00Z"
+  "reset_at": "2026-02-02T00:00:00Z",
+  "meta": { "request_id": "req_xyz", "edge": "eu-1" }
 }
 ```
 
 Anonymous tier: 50 units/day, resets at 00:00 UTC. No registration required.
 
-Need more? [Register for Free tier](/docs/tiers) — 200 units/day and 3 concurrent requests.
+Need more? [Register for Free tier](tiers.md) — 200 units/day and 3 concurrent requests.

@@ -28,7 +28,7 @@ Requires registration and API key.
 | Concurrency | 3 |
 | Max timeout | 60s |
 | Browser (JS) | Yes |
-| Screenshot | Full page, quality 50% |
+| Screenshot | Full page, max 800px wide, quality 50% |
 | History retention | 30 days |
 | Authentication | `X-API-Key` header |
 
@@ -56,4 +56,4 @@ Examples:
 
 ## Blocked domains (beta)
 
-During beta, the following domains are blocked for all tiers: google.com, linkedin.com, facebook.com, instagram.com, twitter.com, x.com, amazon.com, cloudflare.com.
+During beta, the following domains are blocked for public tiers: google.com, linkedin.com, facebook.com, instagram.com, twitter.com, x.com, amazon.com, cloudflare.com.
