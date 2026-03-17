@@ -111,3 +111,19 @@ curl https://api.iney.io/v1/anonymous/usage
 Anonymous tier: 50 units/day, resets at 00:00 UTC. No registration required.
 
 Need more? [Register for Free tier](tiers.md) — 200 units/day and 3 concurrent requests.
+
+## AI Discover
+
+Don't know which CSS selectors to use? Let AI figure it out:
+
+```bash
+curl -X POST https://api.iney.io/v1/discover \
+  -H "X-API-Key: YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "url": "https://github.com/trending",
+    "intent": "trending repos with name and description"
+  }'
+```
+
+Returns extracted data, a reusable recipe for `/v1/scrape`, and a page summary. See [full documentation](discover.md).
